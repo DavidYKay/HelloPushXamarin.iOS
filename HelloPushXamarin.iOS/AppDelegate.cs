@@ -27,7 +27,8 @@ namespace HelloPushXamarin.iOS
 
       app.RegisterForRemoteNotifications();
 
-      return base.FinishedLaunching (app, options);
+      //return base.FinishedLaunching (app, options);
+      return true;
     }
 		
     // This method is invoked when the application is about to move from active to inactive state.
@@ -64,7 +65,7 @@ namespace HelloPushXamarin.iOS
     }
 
     public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken) {
-      Console.WriteLine ("RegisteredForRemoteNotifications");
+      Console.WriteLine ("RegisteredForRemoteNotifications: " + deviceToken.ToString());
 
     }
 
